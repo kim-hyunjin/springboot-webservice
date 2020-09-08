@@ -29,7 +29,7 @@ deploy: # S3로 파일 업로드 혹은 CodeDeploy로 배포 등 외부 서비�
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis reop settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis reop settings에 설정된 값
-    bucket: hyunjin-springboot2-webservice # S3 버킷
+    bucket: hyunjin-springboot2-webservice-build # S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
     acl: private # zip 파일 접근을 private으로
