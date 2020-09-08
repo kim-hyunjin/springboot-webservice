@@ -38,7 +38,7 @@ deploy: # S3로 파일 업로드 혹은 CodeDeploy로 배포 등 외부 서비�
     skip_cleanup: true
     acl: private # zip 파일 접근을 private으로
     local_dir: deploy # before_deploy에서 생성한 디렉토리. 해당 위치의 파일들만 S3로 전송.
-    wait_until-deployed: true
+    wait_until_deployed: true
 
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
@@ -49,4 +49,4 @@ deploy: # S3로 파일 업로드 혹은 CodeDeploy로 배포 등 외부 서비�
     application: springboot2-webservice # 웹 콘솔에서 등록한 CodeDeploy 애플리케이션
     deployment_group: springboot2-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
-    wait_until-deployed: true
+    wait_until_deployed: true
