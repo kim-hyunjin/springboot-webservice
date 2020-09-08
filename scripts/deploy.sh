@@ -23,13 +23,14 @@ fi
 
 echo "> 새 애플리케이션 배포"
 
-JAR_NAME=$(ls -tr $REPOSITORY/ | grep jar | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | grep jar | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 
 echo "> $JAR_NAME 에 실행권한 추가"
 
-chmod +x $JAR_NAME #Jar파일은 실행권한이 없는 상태. nohup으로 실행할 수 있게 실행 권한을 부여
+#Jar파일은 실행권한이 없는 상태. nohup으로 실행할 수 있게 실행 권한을 부여
+chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
