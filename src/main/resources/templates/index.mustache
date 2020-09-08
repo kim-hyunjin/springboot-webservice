@@ -28,10 +28,10 @@
                 <!-- 목록 출력 영역 -->
                 <table class="table table-horizontal table-bordered">
                     <colgroup>
-                        <col style="width: 10%;">
-                        <col style="width: 40%;">
-                        <col style="width: 25%;">
-                        <col style="width: 25%;">
+                        <col style="width: 15%;">
+                        <col style="width: 45%;">
+                        <col style="width: 20%;">
+                        <col style="width: 20%;">
                     </colgroup>
                     <thead class="thead-strong">
                     <tr>
@@ -44,7 +44,7 @@
                     <tbody id="tbody">
                     {{#posts}} <!-- posts라는 리스트를 순회 -->
                     <tr>
-                        <td>{{id}}</td> <!-- 리스트에서 뽑아낸 객체의 필드 -->
+                        <td style="text-align:center;">{{id}}</td> <!-- 리스트에서 뽑아낸 객체의 필드 -->
                         <td><a href="/posts/{{id}}">{{title}}</a></td>
                         <td>{{author}}</td>
                         <td>{{formattedDate}}</td>
