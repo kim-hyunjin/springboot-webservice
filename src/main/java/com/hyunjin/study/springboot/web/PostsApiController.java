@@ -5,8 +5,10 @@ import com.hyunjin.study.springboot.web.dto.PostsResponseDto;
 import com.hyunjin.study.springboot.web.dto.PostsSaveRequestDto;
 import com.hyunjin.study.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
@@ -15,6 +17,7 @@ public class PostsApiController {
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
+        log.debug("requestDto> title:{}, author:{}, content:{}", requestDto.getTitle(), requestDto.getAuthor(), requestDto.getContent());
         return postsService.save(requestDto);
     }
 
