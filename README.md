@@ -15,4 +15,4 @@
 - Nginx
 - GitHub
 
-#### 배포된 사이트 URL : ec2-15-164-69-60.ap-northeast-2.compute.amazonaws.com
+
